@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+	<classPathEntry location="D:\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar"/>
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/test1" userId="root" password="" />
+    <javaModelGenerator targetPackage="com.timxu.ssm.domain" targetProject="ssm" />
+    <sqlMapGenerator targetPackage="mapper" targetProject="ssm" />
+    <javaClientGenerator targetPackage="com.timxu.ssm.mapper" targetProject="ssm" type="XMLMAPPER" />
+    <table schema="test1" tableName="users" >
+      <columnOverride column="id" property="id" />
+      <columnOverride column="username" property="username" />
+      <columnOverride column="password" property="password" />
+    </table>
+  </context>
+</generatorConfiguration>
